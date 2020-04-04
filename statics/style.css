@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allan&display=swap');
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #181818;
+    color: #fff;
+}
+
+.logo{
+    width: 20%;
+    height: 20%;
+    border-radius: 10px;                            
+    margin: 0 40% 8% 40%;
+
+    overflow: hidden;                                               
+    transition-duration: 0.8s;
+    transition-property: transform;
+}
+
+.logo:hover{
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
+
+.logo:hover{
+    animation: scale .4s linear;
+    animation-fill-mode: forwards;
+    transform: 50% 50%;
+}
+
+.plot-title{
+    direction: rtl;
+    font-family: b nazanin;
+    font-style: bold;
+    font-size:18px;
+    text-align: center;
+    color: #c0baba;
+    margin: 0 0 10% 0;
+}
+
+.plot{
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;                            
+    margin: 0 25% 0 25%;
+}
+
+#site-desc{
+    direction: rtl;
+    font-family: b titr;
+    font-style: bold;
+    font-size:28px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.live-logo{
+    width: 5%;
+    height: 5%;
+}
+
+.p-cases{
+    font-family: b nazanin;
+    font-size: 42px;
+    text-align: center;
+    color: rgb(248, 235, 218);
+}
+
+#cases{
+    color: rgb(176, 216, 216);
+    margin-top: 80px;
+    font-size: 38px;
+}
+#death{
+    color: crimson;
+    margin-top: 80px;
+    font-size: 38px;
+}
+#recover{
+    margin-top: 80px;
+    font-size: 38px;
+    color: rgb(12, 165, 50);
+}
+
+.corona-info{
+    width: 80%;
+    margin: 5% 10% 5% 10%;
+}
+
+.title{
+	font-family: b titr;
+	font-size: 120%;
+    background-color: #2a2222;
+    color: #e9e2e2;
+}
+
+.corona-info {
+    margin: 3rem auto;
+    border-collapse: collapse;
+    background: #181818;
+    color: #f4f4f4;
+}
+
+.corona-info th, .corona-info td {
+    text-align: center;
+    border-bottom: 1px solid #555;
+}
+
+.corona-info th {
+    padding: 1rem 0.75rem;
+}
+
+.corona-info th {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.success {
+    background: seagreen;
+}
+
+.danger {
+    background: crimson;
+}
+
+.warning {
+    background: rgb(231, 136, 11);
+}
+
+.corona-info tbody tr:hover {
+    background-color: #222;
+}
+.corona-info tbody tr	.title:hover{
+	background-color: #564343;
+}
+
+.corona-info tbody tr:last-child td{
+    border-bottom: none;
+}
