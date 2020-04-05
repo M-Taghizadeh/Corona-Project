@@ -31,11 +31,10 @@ class mySoider(scrapy.Spider):
             if this_country == []:
                 this_country.append("")
             Country.append(this_country[0])
-        print(Country)
+
         self.delete_key_from_list(Country, "")
+        print("Number of Countries : ", len(Country))
         
-
-
         TotalCases = response.xpath("//tbody/tr/td[2]/text()").extract()
         NewCases = response.xpath("//tbody/tr/td[3]/text()").extract()
         TotalDeath = response.xpath("//tbody/tr/td[4]/text()").extract()
@@ -65,5 +64,4 @@ class mySoider(scrapy.Spider):
     def delete_key_from_list(self, mylist, key):
         while key in mylist:
             mylist.remove(key)
-
         return mylist
