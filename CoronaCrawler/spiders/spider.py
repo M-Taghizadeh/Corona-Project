@@ -1,7 +1,7 @@
 import scrapy 
 import pickle 
 
-class mySoider(scrapy.Spider):
+class mySpider(scrapy.Spider):
     name = "coronaCrawler" #name of your spider
 
     def start_requests(self):
