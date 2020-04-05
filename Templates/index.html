@@ -39,21 +39,21 @@
 					<div class="slide slide_2">
 						<div class="slide-content">
 							<h2><p class="p-cases">مبتلایان تا امروز</p></h2>
-							<p id="cases"">1000</p>
+							<p id="cases">{{ Coronavirus_Cases }}</p>
 						</div>
 					</div>
 					
 					<div class="slide slide_3">
 						<div class="slide-content">
 							<h2><p class="p-cases">فوت شدگان</p></h2>
-							<p id="death"">1000</p>
+							<p id="death">{{ Death }}</p>
 						</div>
 					</div>
 
 					<div class="slide slide_4">
 						<div class="slide-content">
 							<h2><p class="p-cases">بهبود یافتگان</p></h2>
-							<p id="recover">1000</p>
+							<p id="recover">{{ Recovered }}</p>
 						</div>
 					</div>
 					
@@ -93,19 +93,40 @@
             <th>بهبود یافتگان</th>
             <th>مبتلایان اکنون</th>
             <th>افراد در قرنطینه</th>
+            <th>نرخ ابتلا در یک میلیون نفر</th>
         </tr>
 
+		{% for i in range(Country | length) %}
         <tr>
-            <th>100</th>
-            <th>100</th>
-            <th>100</th>
-            <th>100</th>
-            <th>100</th>
-            <th>100</th>
-            <th>100</th>
-            <th>100</th>
-            <th>100</th>
-        </tr>
+            <th>{{ i+1 }}</th>
+            <th style="color: #ffc6b3;">{{ Country[i] }}</th>
+			<th>{{ TotalCases[i] }}</th>
+			{% if NewCases[i] == ' ' %}
+				<th>{{ NewCases[i] }}</th>
+			{% else %}
+				<th class="warning">{{ NewCases[i] }}</th>
+			{% endif %}
+			
+			<th>{{ TotalDeath[i] }}</th>
+			
+			{% if NewDeath[i] == ' ' %}
+				<th>{{ NewDeath[i] }}</th>
+			{% else %}
+				<th class="danger">{{ NewDeath[i] }}</th>
+			{% endif %}
+			
+			{% if TotalRecovered[i] == ' '%}
+				<th>{{ TotalRecovered[i] }}</th>
+			{% else %}
+				<th class="success">{{ TotalRecovered[i] }}</th>
+			{% endif %}
+			
+			
+            <th>{{ ActiveCases[i] }}</th>
+            <th>{{ Serious_Critical[i] }}</th>
+            <th>{{ TotlaCase_in_1Mpop[i] }}</th>
+		</tr>
+		{% endfor %}
 
     </table>
 
