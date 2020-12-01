@@ -34,5 +34,5 @@ def crawl_info():
         TotalRecovered=TotalRecovered, ActiveCases=ActiveCases, Serious_Critical=Serious_Critical, TotlaCase_in_1Mpop=TotlaCase_in_1Mpop,
         Plot_Src=Plot_Src
     )
-
+# Run app
 app.run(debug=True)
